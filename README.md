@@ -45,7 +45,7 @@ Bu yapi sayesinde public taraftaki blog deneyimi ile yonetim operasyonlari birbi
 - Bootstrap
 - IIS / Somee hosting
 
-## Jr Olarak Bu Projede Ogrendiklerim
+## Bu Projede Ogrendiklerim
 
 - MVC katmanli yapi (Controller-View-Model ayrimi)
 - Route yapisi ve default route yonetimi
