@@ -1,0 +1,65 @@
+﻿@model TravelTripProje.Models.Siniflar.Iletisim
+
+@{
+    ViewBag.Title = "İletişim";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="contact">
+    <div class="wrap">
+        @if (TempData["Mesaj"] != null)
+        {
+            var tip = TempData["MesajTipi"] as string;
+            <div style="margin:15px 0;padding:12px 14px;border-radius:6px;background:@(tip == "ok" ? "#e8f5e9" : "#ffebee");color:#333;">
+                @TempData["Mesaj"]
+            </div>
+        }
+
+        <div class="contact-top">
+            <h3>İletişim</h3>
+            <p>Bize yazın; mesajınız veritabanına kaydedilir. Demo projesi olduğu için gerçek mail gönderimi yoktur.</p>
+        </div>
+
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "cmxform", id = "contactForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form">
+                <div>
+                    @Html.TextBoxFor(x => x.AdSoyad, new { @class = "textbox", placeholder = "Ad Soyad", required = "required", autocomplete = "name" })
+                </div>
+                <div>
+                    @Html.TextBoxFor(x => x.Mail, new { @class = "textbox", type = "email", placeholder = "E-posta", required = "required", autocomplete = "email" })
+                </div>
+                <div>
+                    @Html.TextBoxFor(x => x.Konu, new { @class = "textbox", placeholder = "Konu", required = "required" })
+                </div>
+                <div>
+                    <button type="submit" class="read" style="border:none;cursor:pointer;background:#a2365a;color:#fff;padding:8px 18px;border-radius:4px;">Gönder</button>
+                </div>
+            </div>
+
+            <div class="form1">
+                <div>
+                    @Html.TextAreaFor(x => x.Mesaj, new { rows = 8, placeholder = "Mesajınız", required = "required", style = "width:100%;max-width:100%;box-sizing:border-box;" })
+                </div>
+            </div>
+            <div class="clear"></div>
+        }
+
+        <div class="contact-bottom">
+            <div class="contact-left">
+                <div class="contact-add">
+                    <h3>Örnek adres</h3>
+                    <p>Kızılay Mah. Örnek Sokak No: 12 / 4<br />Çankaya / Ankara</p>
+                    <p>Telefon (örnek): +90 (312) 555 55 55</p>
+                    <p>E-posta (örnek): <a href="mailto:demo.tatilblog@example.com">demo.tatilblog@example.com</a></p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe width="580" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Ankara&amp;output=embed"></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
