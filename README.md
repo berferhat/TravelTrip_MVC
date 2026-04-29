@@ -90,6 +90,30 @@ Somee gibi paylasimli hostlarda:
 - Rol bazli yetkilendirme
 - Unit test entegrasyonu
 
+## Ekran Goruntuleri
+
+### Public Sayfalar
+
+- Ana Sayfa  
+  ![Ana Sayfa](screenshots/01-home.png)
+
+- Blog Listesi  
+  ![Blog Listesi](screenshots/02-blog-list.png)
+
+- Iletisim Sayfasi  
+  ![Iletisim Sayfasi](screenshots/03-contact.png)
+
+### Admin Paneli
+
+- Admin Giris Ekrani  
+  ![Admin Giris Ekrani](screenshots/04-admin-login.png)
+
+- Blog Yonetim Listesi  
+  ![Blog Yonetim Listesi](screenshots/05-admin-blog-list.png)
+
+- Yorum Yonetim Listesi  
+  ![Yorum Yonetim Listesi](screenshots/06-admin-comment-list.png)
+
 ## Lisans
 
 Bu proje ogrenme amacli hazirlanmistir.
