@@ -22,6 +22,18 @@ Admin tarafinda:
 - Blog CRUD islemleri yapilabilir
 - Yorum listesi ve yorum guncelleme ekranlari kullanilabilir
 
+## Admin Paneli
+
+Admin paneli, icerik yonetimini tek yerden yapabilmek icin tasarlandi. `Authorize` korumasi ile admin girisi yapilmadan yonetim ekranlarina erisim saglanamaz.
+
+Admin panelinde su moduller bulunur:
+- Blog ekleme, guncelleme ve silme (CRUD)
+- Tum yorumlari listeleme
+- Yorum duzenleme ve moderasyon
+- Yonetim odakli ayri layout (`_AdminLayout`) ile sade arayuz
+
+Bu yapi sayesinde public taraftaki blog deneyimi ile yonetim operasyonlari birbirinden ayrilarak daha duzenli bir mimari elde edilir.
+
 ## Kullanilan Teknolojiler
 
 - C#
